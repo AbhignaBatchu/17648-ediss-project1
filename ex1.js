@@ -23,14 +23,10 @@ var con = mysql.createConnection({
   host: "mysql-instance1.cejcrxrmql06.us-east-1.rds.amazonaws.com",
   user: "abhignabatchu",
   password: "admin123",
-  database: "edissdb",
-  port:9000
+  database: "edissdb"
 });
 
-con.connect(function(err) {
-	//callback
-  if (err) throw err;
-});
+con.connect();
 
 
 app.post('/login',function(req,res){
